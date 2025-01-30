@@ -210,13 +210,13 @@ DB_PASSWORD=                // Add your PASSWORD here
                     <ol class="list-disc pl-6 text-white">
                         <li>Open your terminal and navigate to your project folder.</li>
                         <li>Run the following command to add all your changes:</li>
-                        <pre><code>git add .</code></pre>
+                        <pre><code class="bg-[#1C232B] px-1 rounded">git add .</code></pre>
                         <li>Commit your changes with a message describing the changes:</li>
-                        <pre><code>git commit -m "Your commit message"</code></pre>
+                        <pre><code class="bg-[#1C232B] px-1 rounded">git commit -m "Your commit message"</code></pre>
                         <li>If you haven't connected your local repository to GitHub, you can do so by running:</li>
-                        <pre><code>git remote add origin https://github.com/your-username/your-repository.git</code></pre>
+                        <pre><code class="bg-[#1C232B] px-1 rounded">git remote add origin https://github.com/your-username/your-repository.git</code></pre>
                         <li>Push your changes to GitHub:</li>
-                        <pre><code>git push -u origin main</code></pre>
+                        <pre><code class="bg-[#1C232B] px-1 rounded">git push -u origin main</code></pre>
                     </ol>
                     <li>In Vercel, click "Import Project" and connect your repository from GitHub.</li>
                     <li>Click "Deploy" to start the process.</li>
