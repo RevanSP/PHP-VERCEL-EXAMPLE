@@ -102,7 +102,7 @@ foreach ($headers as $header) {
 {
   "X-Powered-By": "'PHP/' . phpversion()",
   "database": {
-    "status": "'Connected successfully/Connected failed!'",
+    "status": "'Connected successfully!/Connected failed!'",
     "version": "'$conn->server_info'",
     "host": "'$host'",
     "database": "'$database'"
