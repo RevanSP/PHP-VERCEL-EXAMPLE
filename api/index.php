@@ -102,7 +102,7 @@ foreach ($headers as $header) {
 {
   "X-Powered-By": "'PHP/' . phpversion()",
   "database": {
-    "status": "'Connected successfully/Connected successfully'",
+    "status": "'Connected successfully/Connected failed!'",
     "version": "'$conn->server_info'",
     "host": "'$host'",
     "database": "'$database'"
@@ -173,10 +173,10 @@ DB_PASSWORD=                // Add your PASSWORD here
                             class="text-secondary">https://phpmyadmin.freedb.tech</a>.
                     </li>
                 </ol>
+            </section>
 
-                <p class="mb-4">
-                    Congratulations! You have successfully connected a MySQL database to your PHP project for free.
-                </p>
+            <section class=" shadow-md rounded-lg p-6 bg-[#15181D]">
+                <h2 class="text-2xl font-semibold mb-4 text-secondary">DATABASE STATUS</h2>
                 <?php if (isset($statusData['status'])): ?>
                     <?php if (strpos($statusData['status'], 'successfully') !== false): ?>
                         <p class="text-green-500"><?= $statusData['status'] ?></p>
@@ -193,7 +193,7 @@ DB_PASSWORD=                // Add your PASSWORD here
                     <p class="mb-4">Checking connection...</p>
                 <?php endif; ?>
                 <p class="mb-4">
-                    The status above could be either "Connected successfully!" or "Connection failed." As mentioned
+                    The status above could be either "Connected successfully!" or "Connection failed!." As mentioned
                     earlier, this is not suitable for production use, but it is perfect for testing or demo projects.
                 </p>
                 <p class="mb-4">
@@ -201,6 +201,28 @@ DB_PASSWORD=                // Add your PASSWORD here
                     file into base64 (not recommended) in your CRUD Controller logic.
                 </p>
             </section>
+
+            <section class="shadow-md rounded-lg p-6 bg-[#15181D]">
+                <h2 class="text-2xl font-semibold mb-4 text-secondary">HOSTING ON VERCEL</h2>
+                <ol class="list-decimal pl-6 text-white mb-4">
+                    <li>Create a repo on GitHub and push this code from your repository.</li>
+                    <li>Follow these steps before proceeding to Vercel:</li>
+                    <ol class="list-disc pl-6 text-white">
+                        <li>Open your terminal and navigate to your project folder.</li>
+                        <li>Run the following command to add all your changes:</li>
+                        <pre><code>git add .</code></pre>
+                        <li>Commit your changes with a message describing the changes:</li>
+                        <pre><code>git commit -m "Your commit message"</code></pre>
+                        <li>If you haven't connected your local repository to GitHub, you can do so by running:</li>
+                        <pre><code>git remote add origin https://github.com/your-username/your-repository.git</code></pre>
+                        <li>Push your changes to GitHub:</li>
+                        <pre><code>git push -u origin main</code></pre>
+                    </ol>
+                    <li>In Vercel, click "Import Project" and connect your repository from GitHub.</li>
+                    <li>Click "Deploy" to start the process.</li>
+                </ol>
+            </section>
+
         </main>
         <footer class="mt-12 text-center text-gray-600">
             <p>ReiiV. All rights reserved.</p>
