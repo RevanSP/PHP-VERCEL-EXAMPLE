@@ -204,23 +204,23 @@ DB_PASSWORD=                // Add your PASSWORD here
 
             <section class="shadow-md rounded-lg p-6 bg-[#15181D]">
                 <h2 class="text-2xl font-semibold mb-4 text-secondary">HOSTING ON VERCEL</h2>
-                <ol className="list-decimal pl-6 text-white mb-4">
+                <ol class="list-decimal pl-6 text-white mb-4">
                     <li>Create a repo on GitHub and push this code from your repository.</li>
                     <li>Follow these steps before proceeding to Vercel:</li>
-                    <ol className="list-disc pl-6 text-white">
+                    <ol class="list-disc pl-6 text-white">
                         <li>Open your terminal and navigate to your project folder.</li>
                         <li>Initialize a new Git repository if you haven't already:</li>
-                        <code className="bg-[#1C232B] px-1 rounded">git init</code>
+                        <code class="bg-[#1C232B] px-1 rounded">git init</code>
                         <li>Run the following command to add all your changes:</li>
-                        <code className="bg-[#1C232B] px-1 rounded">git add .</code>
+                        <code class="bg-[#1C232B] px-1 rounded">git add .</code>
                         <li>Commit your changes with a message describing the changes:</li>
-                        <code className="bg-[#1C232B] px-1 rounded">git commit -m "Your commit message"</code>
+                        <code class="bg-[#1C232B] px-1 rounded">git commit -m "Your commit message"</code>
                         <li>Create or rename your branch to `main` (if it’s not already named `main`):</li>
-                        <code className="bg-[#1C232B] px-1 rounded">git branch -M main</code>
+                        <code class="bg-[#1C232B] px-1 rounded">git branch -M main</code>
                         <li>If you haven't connected your local repository to GitHub, you can do so by running:</li>
-                        <code className="bg-[#1C232B] px-1 rounded">git remote add origin https://github.com/your-username/your-repository.git</code>
+                        <code class="bg-[#1C232B] px-1 rounded">git remote add origin https://github.com/your-username/your-repository.git</code>
                         <li>Push your changes to GitHub:</li>
-                        <code className="bg-[#1C232B] px-1 rounded">git push -u origin main</code>
+                        <code class="bg-[#1C232B] px-1 rounded">git push -u origin main</code>
                     </ol>
                     <li>In Vercel, click "Import Project" and connect your repository from GitHub.</li>
                     <li>Click "Deploy" to start the process.</li>
