@@ -1,5 +1,7 @@
 <?php
-include __DIR__ . '/lib/connect.php';
+include 'lib/force_https.php'; 
+include 'lib/connect.php';  
+
 $statusData = getDbConnectionStatus();
 ?>
 
@@ -211,7 +213,8 @@ DB_PASSWORD=                // Add your PASSWORD here
                         <li>Open your terminal and navigate to your project folder.</li>
                         <li>Initialize a new Git repository if you haven't already:</li>
                         <code class="bg-[#1C232B] px-1 rounded">git init</code>
-                        <li>Run the following command to add all your changes:</li>
+                         <li>ignore your <code class="bg-[#1C232B] px-1 rounded">.env</code> in <code class="bg-[#1C232B] px-1 rounded">.gitignore</code></li>
+                         <li>Run the following command to add all your changes:</li>
                         <code class="bg-[#1C232B] px-1 rounded">git add .</code>
                         <li>Commit your changes with a message describing the changes:</li>
                         <code class="bg-[#1C232B] px-1 rounded">git commit -m "Your commit message"</code>
