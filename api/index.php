@@ -1,5 +1,4 @@
 <?php
-include 'lib/force_https.php'; 
 include 'lib/connect.php';  
 
 $statusData = getDbConnectionStatus();
