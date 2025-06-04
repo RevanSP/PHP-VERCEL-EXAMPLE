@@ -62,7 +62,7 @@ $statusData = getDbConnectionStatus();
 <body class="font-sans text-gray-800  min-h-screen bg-[#1B222A]">
     <div class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
         <header class="shadow-md rounded-lg p-6 mb-4 bg-[#15181D] flex flex-col justify-center items-center">
-            <img src="<?php echo getStaticPath('https://raw.githubusercontent.com/AnwarAchilles/VTuber-Style-Logos/main/php-new/default.png'); ?>"
+            <img src="https://raw.githubusercontent.com/AnwarAchilles/VTuber-Style-Logos/main/php-new/default.png"
                 class="w-40">
             <h1 class="text-3xl font-bold text-center text-secondary mt-4">PHP on Vercel</h1>
         </header>
@@ -112,7 +112,41 @@ foreach ($headers as $header) {
 }
 </pre>
             </section>
+            <section class="shadow-md rounded-lg p-6 bg-[#15181D]">
+                <h2 class="text-2xl font-semibold mb-4 text-secondary">HANDLING STATIC FILES</h2>
+                <p class="mb-4">
+                    To handle static files (images, CSS, JS, etc.) that work in both environments (local and Vercel), use the <code class="bg-[#1C232B] px-1 rounded">getStaticPath()</code> function:
+                </p>
+                <div class="mb-4">
+                    <h3 class="text-xl font-semibold mb-2 text-secondary">1. Local Files (from public/ folder)</h3>
+                    <pre class="p-4 rounded-md text-sm overflow-x-auto">
+// For images
+&lt;img src="&lt;?php echo getStaticPath('images/logo.png'); ?&gt;"&gt;
 
+// For CSS
+&lt;link href="&lt;?php echo getStaticPath('css/style.css'); ?&gt;" rel="stylesheet"&gt;
+
+// For JavaScript
+&lt;script src="&lt;?php echo getStaticPath('js/script.js'); ?&gt;"&gt;&lt;/script&gt;</pre>
+                </div>
+                <div class="mb-4">
+                    <h3 class="text-xl font-semibold mb-2 text-secondary">2. External URLs</h3>
+                    <pre class="p-4 rounded-md text-sm overflow-x-auto">
+// For external URLs, use the URL directly
+&lt;img src="https://example.com/image.jpg"&gt;
+&lt;link href="https://cdn.example.com/style.css" rel="stylesheet"&gt;
+&lt;script src="https://cdn.example.com/script.js"&gt;&lt;/script&gt;</pre>
+                </div>
+                <p class="mb-4">
+                    <strong>Important Notes:</strong>
+                </p>
+                <ul class="list-disc pl-6 text-white mb-4">
+                    <li>All local files must be stored in the <code class="bg-[#1C232B] px-1 rounded">public/</code> folder</li>
+                    <li>Use <code class="bg-[#1C232B] px-1 rounded">getStaticPath()</code> only for local files</li>
+                    <li>For external URLs (http:// or https://), use the URL directly</li>
+                    <li>Make sure filenames match case-sensitive (uppercase/lowercase must be exact)</li>
+                </ul>
+            </section>
             <section class="shadow-md rounded-lg p-6 bg-[#15181D]">
                 <h2 class="text-2xl font-semibold mb-4 text-secondary">CONNECT WITH MYSQL (FREE)</h2>
                 <p class="mb-4">
@@ -176,7 +210,6 @@ DB_PASSWORD=                // Add your PASSWORD here
                     </li>
                 </ol>
             </section>
-
             <section class=" shadow-md rounded-lg p-6 bg-[#15181D]">
                 <h2 class="text-2xl font-semibold mb-4 text-secondary">DATABASE STATUS</h2>
                 <?php if (isset($statusData['status'])): ?>
@@ -203,7 +236,6 @@ DB_PASSWORD=                // Add your PASSWORD here
                     file into base64 (not recommended) in your CRUD Controller logic.
                 </p>
             </section>
-
             <section class="shadow-md rounded-lg p-6 bg-[#15181D]">
                 <h2 class="text-2xl font-semibold mb-4 text-secondary">HOSTING ON VERCEL</h2>
                 <ol class="list-decimal pl-6 text-white mb-4">
@@ -229,6 +261,8 @@ DB_PASSWORD=                // Add your PASSWORD here
                     <li>Click "Deploy" to start the process.</li>
                 </ol>
             </section>
+
+
 
         </main>
         <footer class="mt-12 text-center text-gray-600">
