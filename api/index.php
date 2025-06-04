@@ -62,7 +62,7 @@ $statusData = getDbConnectionStatus();
 <body class="font-sans text-gray-800  min-h-screen bg-[#1B222A]">
     <div class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
         <header class="shadow-md rounded-lg p-6 mb-4 bg-[#15181D] flex flex-col justify-center items-center">
-            <img src="<?php echo getStaticPath('L.png'); ?>"
+            <img src="<?php echo getStaticPath('https://raw.githubusercontent.com/AnwarAchilles/VTuber-Style-Logos/main/php-new/default.png'); ?>"
                 class="w-40">
             <h1 class="text-3xl font-bold text-center text-secondary mt-4">PHP on Vercel</h1>
         </header>
