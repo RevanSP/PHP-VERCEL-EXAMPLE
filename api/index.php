@@ -1,5 +1,6 @@
 <?php
-include 'lib/connect.php';  
+include 'lib/connect.php';
+include 'lib/helpers.php';
 
 $statusData = getDbConnectionStatus();
 ?>
@@ -61,7 +62,7 @@ $statusData = getDbConnectionStatus();
 <body class="font-sans text-gray-800  min-h-screen bg-[#1B222A]">
     <div class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
         <header class="shadow-md rounded-lg p-6 mb-4 bg-[#15181D] flex flex-col justify-center items-center">
-            <img src="https://raw.githubusercontent.com/AnwarAchilles/VTuber-Style-Logos/main/php-new/default.png"
+            <img src="<?php echo getStaticPath('L.png'); ?>"
                 class="w-40">
             <h1 class="text-3xl font-bold text-center text-secondary mt-4">PHP on Vercel</h1>
         </header>
@@ -212,12 +213,12 @@ DB_PASSWORD=                // Add your PASSWORD here
                         <li>Open your terminal and navigate to your project folder.</li>
                         <li>Initialize a new Git repository if you haven't already:</li>
                         <code class="bg-[#1C232B] px-1 rounded">git init</code>
-                         <li>ignore your <code class="bg-[#1C232B] px-1 rounded">.env</code> in <code class="bg-[#1C232B] px-1 rounded">.gitignore</code></li>
-                         <li>Run the following command to add all your changes:</li>
+                        <li>ignore your <code class="bg-[#1C232B] px-1 rounded">.env</code> in <code class="bg-[#1C232B] px-1 rounded">.gitignore</code></li>
+                        <li>Run the following command to add all your changes:</li>
                         <code class="bg-[#1C232B] px-1 rounded">git add .</code>
                         <li>Commit your changes with a message describing the changes:</li>
                         <code class="bg-[#1C232B] px-1 rounded">git commit -m "Your commit message"</code>
-                        <li>Create or rename your branch to `main` (if it’s not already named `main`):</li>
+                        <li>Create or rename your branch to `main` (if it's not already named `main`):</li>
                         <code class="bg-[#1C232B] px-1 rounded">git branch -M main</code>
                         <li>If you haven't connected your local repository to GitHub, you can do so by running:</li>
                         <code class="bg-[#1C232B] px-1 rounded">git remote add origin https://github.com/your-username/your-repository.git</code>
